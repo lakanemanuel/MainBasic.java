@@ -29,12 +29,16 @@ static void menu() {
       if(option ==1)
       {
          //System.out.println("option1");
-             viewcurrentbalance vb = new viewcurrentbalance();
-             vb.viewbalance();
+             //viewcurrentbalance vb = new viewcurrentbalance();
+             //vb.viewbalance();
+
+             banktransaction bt = new banktransaction();
+             bt.viewbalance("currentbalance.txt");
       }
       else if (option ==2) 
       {
-          System.out.println("option2");
+          banktransaction bt = new banktransaction();
+             bt.deposit("currentbalance.txt");
       }
       else
       {

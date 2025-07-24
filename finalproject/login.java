@@ -14,10 +14,14 @@ public class login {
     System.out.print("\033[H\033[2J");
     System.out.flush();
     String Mypassword="";
+    String myfilepath = "";
 
-      String filePath = "/workspaces/MainBasic.java/finalproject/password.txt";
+    banktransaction bt = new banktransaction();
+    myfilepath = bt.filePath().toString().trim();
 
-       try (BufferedReader reader = new BufferedReader(new FileReader(filePath))) {
+     // String filePath = "/workspaces/MainBasic.java/finalproject/password.txt";
+          myfilepath = myfilepath+"password.txt";;
+       try (BufferedReader reader = new BufferedReader(new FileReader(myfilepath))) {
             Mypassword = reader.readLine();
         } catch (IOException e) {
             System.err.println("Error reading file: " + e.getMessage());
