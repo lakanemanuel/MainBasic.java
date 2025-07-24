@@ -7,7 +7,7 @@ import java.io.IOException;
 
 public class mainmenu {
     
-     static void menu() {
+static void menu() {
      
 
     System.out.print("\033[H\033[2J");
@@ -28,7 +28,9 @@ public class mainmenu {
 
       if(option ==1)
       {
-         System.out.println("option1");
+         //System.out.println("option1");
+             viewcurrentbalance vb = new viewcurrentbalance();
+             vb.viewbalance();
       }
       else if (option ==2) 
       {
