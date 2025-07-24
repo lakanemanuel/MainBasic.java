@@ -35,7 +35,10 @@ public class login {
 
       if(password.trim().toString().equals(Mypassword.trim().toString()))
        {
-        System.out.print(" Password Accepted ");
+        //System.out.print(" Password Accepted ");
+
+         mainmenu mymenu = new mainmenu();
+         mymenu.menu();
        }
        else
        {
