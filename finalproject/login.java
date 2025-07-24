@@ -1,0 +1,46 @@
+package finalproject;
+
+import java.util.*;
+import java.io.BufferedReader;
+import java.io.FileReader;
+import java.io.IOException;
+
+public class login {
+  public static void main(String[] args) {
+     
+    
+     
+
+    System.out.print("\033[H\033[2J");
+    System.out.flush();
+    String Mypassword="";
+
+      String filePath = "/workspaces/MainBasic.java/finalproject/password.txt";
+
+       try (BufferedReader reader = new BufferedReader(new FileReader(filePath))) {
+            Mypassword = reader.readLine();
+        } catch (IOException e) {
+            System.err.println("Error reading file: " + e.getMessage());
+        }
+
+      
+
+     Scanner scanner = new Scanner(System.in);
+
+       
+        
+      System.out.print("Enter your password:   ");
+
+      String password = scanner.nextLine();
+
+      if(password.trim().toString().equals(Mypassword.trim().toString()))
+       {
+        System.out.print(" Password Accepted ");
+       }
+       else
+       {
+        System.out.print("Invalid Password");
+       }
+    
+    }
+}
