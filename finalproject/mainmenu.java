@@ -29,9 +29,7 @@ static void menu() {
     
       if(option ==1)
       {
-         //System.out.println("option1");
-             //viewcurrentbalance vb = new viewcurrentbalance();
-             //vb.viewbalance();
+
 
              banktransaction bt = new banktransaction();
              bt.viewbalance("currentbalance.txt");

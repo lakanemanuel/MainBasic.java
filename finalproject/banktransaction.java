@@ -68,7 +68,7 @@ static String getbalance(String file)
    
       System.out.print("\033[H\033[2J");
     System.out.flush();
-    
+
        try (BufferedReader reader = new BufferedReader(new FileReader(filePath))) {
           //  mycurrentbalance = reader.readLine();
            String line;
@@ -164,20 +164,31 @@ static void viewbalance(String vwbalance)
        
       System.out.print("\n\n\nAmount to Withdraw: ");
 
+
       double Withdraw = scanner.nextDouble();
+
+      if(balance >=Withdraw)
+      {
+            balance = balance - Withdraw;
+   
+         String content = Double.toString(balance);
+
+         updatefile(filePath, content);
+         filePath = "";
+
+         filePath = "transactions.txt";
+   
+         updatebanktransaction(filePath,mycurrentbalance,Double.toString(Withdraw), content,"WID");
+
+         viewbalance("currentbalance.txt");
+      }
+      else
+      {
+          System.out.println("Your requested amount is grader than your current balance");
+          Withdraw(vwbalance);
+      }
        
-      balance = balance - Withdraw;
-   
-      String content = Double.toString(balance);
-
-      updatefile(filePath, content);
-      filePath = "";
-
-      filePath = "transactions.txt";
-   
-      updatebanktransaction(filePath,mycurrentbalance,Double.toString(Withdraw), content,"WID");
-
-     viewbalance("currentbalance.txt");
+    
   }
 }
 
