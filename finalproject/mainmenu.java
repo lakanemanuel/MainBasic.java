@@ -10,8 +10,10 @@ public class mainmenu {
 static void menu() {
      
 
-    System.out.print("\033[H\033[2J");
-    System.out.flush();
+     Get_Update_Data getupdate = new Get_Update_Data();
+     getupdate.clearscreen();
+
+      banktransaction bt = new banktransaction();
 
     System.out.println("1. View Balance");
     System.out.println("2. Deposit");
@@ -30,24 +32,19 @@ static void menu() {
       if(option ==1)
       {
 
-
-             banktransaction bt = new banktransaction();
              bt.viewbalance("currentbalance.txt");
       }
       else if (option ==2) 
       {
-          banktransaction bt = new banktransaction();
              bt.deposit("currentbalance.txt");
       }
        else if (option ==3) 
       {
-          banktransaction bt = new banktransaction();
              bt.Withdraw("currentbalance.txt");
       }
          else if (option ==4) 
       {
-          banktransaction bt = new banktransaction();
-             bt.viewtransaction("transactions.txt");
+             getupdate.viewtransaction("transactions.txt");
       }
       else
       {
