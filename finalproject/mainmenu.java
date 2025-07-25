@@ -16,6 +16,7 @@ static void menu() {
     System.out.println("1. View Balance");
     System.out.println("2. Deposit");
     System.out.println("3. Withdraw");
+    System.out.println("4. View Transaction History");
     System.out.println("\n\n ");
 
     Scanner scanner = new Scanner(System.in);
@@ -39,6 +40,16 @@ static void menu() {
       {
           banktransaction bt = new banktransaction();
              bt.deposit("currentbalance.txt");
+      }
+       else if (option ==3) 
+      {
+          banktransaction bt = new banktransaction();
+             bt.Withdraw("currentbalance.txt");
+      }
+         else if (option ==4) 
+      {
+          banktransaction bt = new banktransaction();
+             bt.viewtransaction("transactions.txt");
       }
       else
       {
