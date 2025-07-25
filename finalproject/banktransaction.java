@@ -124,7 +124,7 @@ static void viewbalance(String vwbalance)
         } catch (IOException e) {
             System.err.println("Error writing to file: " + e.getMessage());
         }
-
+      scanner.close();
 
 
          System.out.print("\n\nYour current balance is: " + balance);
@@ -132,10 +132,8 @@ static void viewbalance(String vwbalance)
 
            System.out.print("\n\n\n\n Press Enter to go back to main menu");
 
-      //String anykey = scanner.nextLine();
-       
-      // mainmenu mymenu = new mainmenu();
-      // mymenu.menu();
+      // String anykey = scanner.nextLine();
+        viewbalance("currentbalance.txt")
   }
 }
 

@@ -25,7 +25,7 @@ static void menu() {
       System.out.print("Choose transaction: ");
 
       Integer option = scanner.nextInt();
-
+    
       if(option ==1)
       {
          //System.out.println("option1");
@@ -45,6 +45,6 @@ static void menu() {
          System.out.println("Invalid option");
       }
     
-    
+       scanner.close();
   }
 }

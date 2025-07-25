@@ -36,7 +36,7 @@ public class login {
       System.out.print("Enter your password:   ");
 
       String password = scanner.nextLine();
-
+    //12345  scanner.close();
       if(password.trim().toString().equals(Mypassword.trim().toString()))
        {
         //System.out.print(" Password Accepted ");
@@ -48,6 +48,6 @@ public class login {
        {
         System.out.print("Invalid Password");
        }
-    
+       scanner.close();
     }
 }
