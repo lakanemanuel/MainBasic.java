@@ -11,8 +11,9 @@ public class login {
     
      
 
-    System.out.print("\033[H\033[2J");
-    System.out.flush();
+     Get_Update_Data getupdate = new Get_Update_Data();
+     getupdate.clearscreen();
+     
     String Mypassword="";
     String myfilepath = "";
 
