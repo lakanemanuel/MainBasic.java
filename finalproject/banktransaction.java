@@ -73,9 +73,7 @@ static void viewbalance(String vwbalance)
     String filePath = vwbalance;
 
      String mycurrentbalance = "";
-
      
-
       Get_Update_Data getupdate = new Get_Update_Data();
      getupdate.clearscreen();
 
