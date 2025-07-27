@@ -19,8 +19,7 @@ static void menu() {
     System.out.println("2. Deposit");
     System.out.println("3. Withdraw");
     System.out.println("4. View Transaction History");
-    System.out.println("5. Change Password");
-    System.out.println("6. Exit");
+    System.out.println("5. Exit");
     System.out.println("\n\n ");
 
     Scanner scanner = new Scanner(System.in);
@@ -49,10 +48,6 @@ static void menu() {
              getupdate.viewtransaction("transactions.txt");
       }
           else if (option ==5) 
-      {
-             //getupdate.viewtransaction("transactions.txt");
-      }
-          else if (option ==6) 
       {
                  getupdate.clearscreen();
                   System.out.println("Thank you for using our system!");
